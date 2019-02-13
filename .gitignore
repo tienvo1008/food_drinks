@@ -1,6 +1,12 @@
 /node_modules
 /public/hot
 /public/storage
+/public/admin/*.html
+/public/admin/bower_components/flot
+/public/admin/bower_components/flot.tooltip
+/public/admin/bower_components/mocha
+/public/admin/bower_components/morrisjs
+/public/admin/bower_components/raphael
 /storage/*.key
 /vendor
 /.idea
