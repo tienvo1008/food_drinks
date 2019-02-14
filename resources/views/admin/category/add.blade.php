@@ -17,7 +17,10 @@
                             <label>@lang('category.cateParent')</label>
                             <select class="form-control">
                                 <option value="0">@lang('category.please_chose_cate')</option>
-                                <option value="">Tin Tức</option>
+                                <?php cate_parent($parent); ?>
+                                {{--@foreach($parent as $item)--}}
+                                {{--<option value="">{!! $item["name"]!!}</option>--}}
+                                {{--@endforeach--}}
                             </select>
                         </div>
                         <div class="form-group">
@@ -27,10 +30,6 @@
                         <div class="form-group">
                             <label>@lang('category.cateOrder')</label>
                             <input class="form-control" name="txtOrder" placeholder="@lang('category.place_cate_order')" />
-                        </div>
-                        <div class="form-group">
-                            <label>@lang('category.cateKeyword')</label>
-                            <input class="form-control" name="txtKeyword" placeholder="@lang('category.place_cate_keyword')" />
                         </div>
                         <div class="form-group">
                             <label>@lang('category.cateDes')</label>

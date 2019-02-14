@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Http\Requests\CategoryRequets;
 
 class CategoryController extends Controller
 {
@@ -22,11 +23,8 @@ class CategoryController extends Controller
         $cate = new Category;
         $cate->name = $requets->txtCateName;
         $cate->alias = changeTitle($requets->txtCateName);
-        $cate->order = $requets->txtOrder;
         $cate->parent_id = 1;
-        $cate->keywords = $requets->txtKeyword;
         $cate->description = $requets->txtDescription;
-
         $cate->save();
 
         return redirect()->route('admin.cate.list')->with(['flash_level'=>'success',
